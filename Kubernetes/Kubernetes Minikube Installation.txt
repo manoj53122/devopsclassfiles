@@ -9,6 +9,9 @@ kubectl version --client -o json
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.6.2.deb  && sudo dpkg -i minikube_1.6.2.deb
 
 sudo minikube config set vm-driver none
+
+minikube start --extra-config=kubeadm.ignore-preflight-errors=NumCPU --force --cpus 1
+                             (or)
 sudo minikube start &  
 
 
